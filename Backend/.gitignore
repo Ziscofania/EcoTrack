@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Entorno
+.env
+
+# Archivos del sistema
+.DS_Store
+*.log
