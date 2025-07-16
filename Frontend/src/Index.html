@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de carga</title>
+</head>
+<body>
+    <h1>Cargando...</h1>
+    <p>Por favor, espera mientras se carga la aplicación.</p>
+    <script>
+        // Redirigir a la página de inicio después de 2 segundos
+        setTimeout(() => {
+            window.location.href = '/Frontend/src/pages/login-Register.html';
+        }, 2000);
+    </script>
+    <link rel="stylesheet" href="/Frontend/src/css/Login.css">
+    <link rel="icon" type="image/x-icon" href="/Frontend/src/favicon.ico">
+    <script src="/Frontend/src/js/Credential.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        // Inicializar el botón de inicio de sesión de Google
+        window.onload = function() {
+            window.google.accounts.id.initialize({
+                client_id: '942903449847-800fco5d33ti5v098q2ksd670mtgmbc7.apps.googleusercontent.com',
+                callback: handleCredentialResponse,
+                auto_select: false,
+                ux_mode: 'popup',
+                context: 'signin'
+            });
+            window.google.accounts.id.renderButton(
+                document.querySelector('.g_id_signin'),
+                { theme: 'outline', size: 'large', shape: 'rectangular', text: 'sign_in_with', logo_alignment: 'left' }
+            );
+        };
+    </script>
+</body>
+</html>

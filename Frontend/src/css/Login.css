@@ -7,3 +7,6 @@ body {
     display: none;
     margin-top: 20px;
     }
+    #user-info {
+display: none;
+}

@@ -44,3 +44,7 @@ async function handleCredentialResponse(response) {
         alert("❌ Error al iniciar sesión");
     }
     }
+function handleCredentialResponse(response) {
+  // Validar con backend...
+document.getElementById("user-info").style.display = "block";
+}
